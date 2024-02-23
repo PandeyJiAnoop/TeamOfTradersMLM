@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_customerheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#eee"
+        android:orientation="horizontal">
+        <TextView android:id="@+id/tv"
+            
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Sr.No."
+            android:textColor="@color/black"/>
+        <TextView android:id="@+id/tv1"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Package"
+            
+            android:textColor="@color/black" />
+        <TextView android:id="@+id/tv2"
+
+            
+            android:layout_width="0dp" android:layout_weight="1"            android:layout_height="match_parent"
+            android:text="Income"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="@color/skyblue"/>
+        <TextView android:id="@+id/tv3"
+            android:visibility="gone"
+            android:layout_width="0dp" android:layout_weight="1"            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Pay Date"
+            android:textAlignment="center"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <View
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp">
+
+    </View>
+</LinearLayout>

@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:background="#000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.akp.anoop_user.wfc.DashboardActivity">
+        <RelativeLayout
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/header_rl">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:src="@drawable/menu"
+                android:padding="10dp"
+                android:tint="@color/golden"
+                android:layout_centerVertical="true"
+                android:id="@+id/sliding_menu" />
+            <TextView
+                android:id="@+id/location_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/sliding_menu"
+                android:gravity="center"
+                android:text="Welcome To Dashboard"
+                android:textColor="@color/golden"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/srl_refresh"
+            android:layout_below="@+id/header_rl"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            android:background="@drawable/bgcard">
+
+                            <LinearLayout
+                                android:padding="8dp"
+                                android:id="@+id/linearStar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/tvMining"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/appicon"
+                                    android:background="@drawable/circle"
+                                    android:gravity="center"
+                                    android:padding="3dp" />
+                                <TextView android:id="@+id/name_tv"                                android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textAllCaps="true"
+                                    android:padding="5dp"
+                                    android:textAlignment="center"
+                                    android:text="MINING SPEED\n0.00"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginBottom="5dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView android:id="@+id/package_tv"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="7dp"
+                                    android:text="MINING SPEED\n0.00"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                                <TextView android:id="@+id/package_name_tv"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Package Name\n0.00"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView android:id="@+id/main_wallet_tv"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="MINING SPEED\n0.00"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:background="#010128"
+                            android:id="@+id/share_ll"
+                            android:padding="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginRight="60dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textSize="16dp"
+                                    android:text="My Referral Link"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="3dp"
+                                    android:id="@+id/referral_tv"
+                                    android:text="https://teamoftraders.in/Account/CustomerSignUp?Id="
+                                    android:textColor="@color/white"
+                                    />
+                            </LinearLayout>
+                            <ImageView android:backgroundTint="#070F3A"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="40dp"
+                                android:src="@android:drawable/ic_menu_share"
+                                android:padding="8dp"
+                                android:tint="@color/red"
+                                android:background="@drawable/circle"
+                                android:layout_height="40dp">
+                            </ImageView>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/withdraw_das_btn"
+                                android:background="@drawable/bg_btn_blue"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:paddingLeft="10dp"
+                                android:drawableTint="@color/white"
+                                android:drawableLeft="@drawable/withdraw"
+                                android:layout_marginRight="5dp"
+                                android:text="Withdraw"
+                                android:textAllCaps="true"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_height="wrap_content">
+
+                            </androidx.appcompat.widget.AppCompatButton>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/deposite_das_btn"
+                                android:background="@drawable/bg_btn_blue"
+                                android:layout_weight="1"
+                                android:layout_width="0dp" android:paddingLeft="10dp"
+                                android:drawableLeft="@drawable/deposite"
+                                android:text="Deposit"
+                                android:drawableTint="@color/white"
+                                android:textAllCaps="true"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_height="wrap_content">
+
+                            </androidx.appcompat.widget.AppCompatButton>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:background="@drawable/login_back"
+                            android:layout_height="180dp">
+                              <androidx.viewpager.widget.ViewPager
+                                        android:id="@+id/pager1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentTop="true" />
+                                    <com.viewpagerindicator.CirclePageIndicator
+                                        android:id="@+id/indicator"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="90dp">
+                            <LinearLayout
+                                android:id="@+id/package_ll"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/d_11"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:id="@+id/ewallet_tv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textSize="12dp"
+                                            android:layout_marginTop="5dp"
+                                            android:text="E-Wallet"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:id="@+id/total_team_ll"
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/d_15"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:id="@+id/totalreferral_tv"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            android:text="Total Referral"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="90dp">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/total_active_team_ll"
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/a10"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:id="@+id/joining_tv"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            android:text="Joining Date"
+                                            android:textColor="@color/white" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+
+                                android:id="@+id/total_incative_team_ll"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/a4"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="10dp"
+                                            android:text="N/A"
+                                            android:id="@+id/activationdate_tv"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold"
+                                            android:text="Activation Date"
+                                            android:textColor="@color/white"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="90dp">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/das_level_income_ll"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/a6"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:textColor="@color/white"
+
+                                            android:id="@+id/roi_income_tv"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Trading Income"
+                                            android:textColor="@color/white" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:id="@+id/das_withdraw_ll"
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/a8"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:textColor="@color/white"
+
+                                            android:id="@+id/direct_income_tv"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Direct Income"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="90dp">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:id="@+id/contact_ll"
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/d_4"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:textColor="@color/white"
+
+                                            android:id="@+id/level_income_tv"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Team Trading Income"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:id="@+id/direct_sponsor_income_ll"
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/d_12"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:textColor="@color/white"
+
+                                            android:id="@+id/direct_saponser_income_tv"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Trading Club Leader Income"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="90dp">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:id="@+id/total_business_ll"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/a1"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:textColor="@color/white"
+                                            android:id="@+id/reward_tv"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:layout_marginTop="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Today Income"
+                                            android:textColor="@color/white" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:id="@+id/total_income_ll"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/a2"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:id="@+id/toatl_income_tv"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:layout_marginTop="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Total Income"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="90dp">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:id="@+id/balance_ll"
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/a3"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:textColor="@color/white"
+                                            android:id="@+id/withdraw_tv"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:layout_marginTop="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Total Withdrawal"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+
+                                android:id="@+id/hold_income_ll"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/d_14"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:id="@+id/active_referral_tv"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Active Referral"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="90dp">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/a9"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:textColor="@color/white"
+                                            android:id="@+id/total_activeteam_tv"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:layout_marginTop="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Total Active Team"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/box"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:backgroundTint="#070F3A"
+                                        android:layout_margin="3dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/d_9"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:padding="8dp" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textSize="12dp"
+                                            android:text="N/A"
+                                            android:id="@+id/inactive_team_tv"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold" />
+                                        <TextView                                         android:layout_marginTop="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:textStyle="bold"
+                                            android:textSize="12dp"
+                                            android:text="Total In-Active Team"
+                                            android:textColor="@color/white"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/shiba_main_ll"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:background="@drawable/box"
+                            android:layout_height="120dp">
+                            <ImageView
+                                android:backgroundTint="#070F3A"
+                                android:layout_margin="3dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/d_5"
+                                android:background="@drawable/circle"
+                                android:gravity="center" 
+                                android:padding="8dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <LinearLayout android:layout_marginTop="5dp"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:textSize="19dp" android:layout_marginRight="10dp"
+                                        android:text="Team Business"
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <Button
+                                    android:layout_marginRight="30dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="20dp" android:textSize="22dp"
+                                    android:id="@+id/team_business_tv" android:textColor="@color/white"
+                                    android:layout_width="wrap_content" android:textStyle="bold"
+                                    android:text="$ 00.00" android:backgroundTint="@color/red"
+                                    android:layout_height="wrap_content">
+                                </Button>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:tint="@color/white"
+                                android:textSize="18sp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="bold"
+                                android:text="Personal Details"
+                                android:textColor="@color/golden" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/rounded_edittext_blue"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:padding="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp">
+                                        <TextView
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:textStyle="bold"
+                                            android:text="Details Type"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" >
+
+                                        </TextView>
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white" />
+                                        <TextView
+
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="Value"
+                                            android:textStyle="bold"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginLeft="11dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@color/white" />
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp">
+                                        <TextView
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="User Id	"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white" />
+                                        <TextView
+
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="N/A"
+                                            android:id="@+id/user_id_tv"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginLeft="11dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@color/white" />
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp">
+                                        <TextView
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="Name"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white" />
+                                        <TextView
+                                            android:id="@+id/user_name_tv"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="N/A"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginLeft="11dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@color/white" />
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp">
+                                        <TextView
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="Sponsor Id"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white" />
+                                        <TextView
+                                            android:id="@+id/sponser_id_tv"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="N/A"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginLeft="11dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@color/white" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp">
+                                        <TextView
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="Activation"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white" />
+                                        <TextView
+
+                                            android:id="@+id/activaation_date_tv"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="N/A"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginLeft="11dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@color/white" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp">
+                                        <TextView
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="Email Id"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white" />
+                                        <TextView
+                                            android:id="@+id/email_tv"
+
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="N/A"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginLeft="11dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@color/white" />
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp">
+                                        <TextView
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="Mobile No."
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white" />
+                                        <TextView
+                                            android:id="@+id/mobile_tv"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="30dp"
+                                            android:text="N/A"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginLeft="11dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+        <include
+            layout="@layout/slidemenu"
+            android:layout_width="260dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
